@@ -352,7 +352,7 @@ local on_attach = function(_, bufnr)
   nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
   nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-  nmap('<leader>sd', vim.lsp.buf.signature_help, '[S]ignature [D]ocumentation')
+  nmap('<C-s>', vim.lsp.buf.signature_help, '[S]ignature [D]ocumentation')
 
   -- Lesser used LSP functionality
   nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
