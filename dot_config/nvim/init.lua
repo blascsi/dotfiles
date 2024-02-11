@@ -453,6 +453,12 @@ cmp.setup {
     { name = 'path' },
     { name = 'buffer' },
   },
+  window = {
+    completion = cmp.config.window.bordered({
+      scrollbar = false
+    }),
+    documentation = cmp.config.window.bordered()
+  },
 }
 
 -- Set up clipboard for WSL
