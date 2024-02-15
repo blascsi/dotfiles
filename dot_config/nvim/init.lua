@@ -73,14 +73,17 @@ require('lazy').setup({
     },
   },
 
+  -- Themes
   {
-    -- Theme inspired by Atom
     'folke/tokyonight.nvim',
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'tokyonight-night'
-    end,
   },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000
+  },
+  -- End of themes
 
   {
     -- Set lualine as statusline
@@ -142,6 +145,9 @@ require('lazy').setup({
 }, {})
 
 -- [[ Setting options ]]
+
+-- Set up default theme
+vim.cmd.colorscheme 'tokyonight-night'
 
 -- Set line numbers to be hybrid
 vim.cmd([[
