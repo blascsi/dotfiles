@@ -17,7 +17,8 @@ return {
 				},
 				follow_current_file = {
 					enabled = true,
-				}
+				},
+				hijack_netrw_behavior = 'open_default',
 			}
 		})
 		vim.keymap.set("n", "<leader>tf", "<cmd>:Neotree toggle <CR>", { desc = "[T]oggle [F]ile Explorer" })
