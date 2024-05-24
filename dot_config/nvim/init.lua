@@ -40,6 +40,11 @@ require('lazy').setup({
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
     },
+    opts = {
+      inlay_hints = {
+        enabled = true
+      }
+    }
   },
 
   {
@@ -379,11 +384,7 @@ end
 local servers = {
   -- pyright = {},
   -- rust_analyzer = {},
-  tsserver = {
-    opts = {
-      inlay_hints = { enabled = true }
-    }
-  },
+  tsserver = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
