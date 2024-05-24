@@ -379,7 +379,11 @@ end
 local servers = {
   -- pyright = {},
   -- rust_analyzer = {},
-  tsserver = {},
+  tsserver = {
+    opts = {
+      inlay_hints = { enabled = true }
+    }
+  },
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
