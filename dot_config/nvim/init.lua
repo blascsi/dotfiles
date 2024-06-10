@@ -41,6 +41,37 @@ require('lazy').setup({
       'folke/neodev.nvim',
     },
     opts = {
+      servers = {
+        tsserver = {
+          settings = {
+            typescript = {
+              inlayHints = {
+                includeInlayParameterNameHints = "all", -- 'none' | 'literals' | 'all'
+                includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+                includeInlayVariableTypeHints = true,
+                includeInlayFunctionParameterTypeHints = true,
+                includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+                includeInlayPropertyDeclarationTypeHints = true,
+                includeInlayFunctionLikeReturnTypeHints = true,
+                includeInlayEnumMemberValueHints = true,
+              },
+            },
+            javascript = {
+              inlayHints = {
+                includeInlayParameterNameHints = "all", -- 'none' | 'literals' | 'all'
+                includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+                includeInlayVariableTypeHints = true,
+
+                includeInlayFunctionParameterTypeHints = true,
+                includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+                includeInlayPropertyDeclarationTypeHints = true,
+                includeInlayFunctionLikeReturnTypeHints = true,
+                includeInlayEnumMemberValueHints = true,
+              },
+            },
+          },
+        },
+      },
       inlay_hints = {
         enabled = true
       }
@@ -384,35 +415,7 @@ end
 local servers = {
   -- pyright = {},
   -- rust_analyzer = {},
-  tsserver = {
-    settings = {
-      typescript = {
-        inlayHints = {
-          includeInlayParameterNameHints = "all",
-          includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-          includeInlayVariableTypeHints = true,
-          includeInlayFunctionParameterTypeHints = true,
-          includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-          includeInlayPropertyDeclarationTypeHints = true,
-          includeInlayFunctionLikeReturnTypeHints = true,
-          includeInlayEnumMemberValueHints = true,
-        },
-      },
-      javascript = {
-        inlayHints = {
-          includeInlayParameterNameHints = "all",
-          includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-          includeInlayVariableTypeHints = true,
-
-          includeInlayFunctionParameterTypeHints = true,
-          includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-          includeInlayPropertyDeclarationTypeHints = true,
-          includeInlayFunctionLikeReturnTypeHints = true,
-          includeInlayEnumMemberValueHints = true,
-        },
-      },
-    },
-  },
+  tsserver = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
