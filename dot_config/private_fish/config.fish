@@ -1,10 +1,6 @@
 fish_add_path ~/bin
 
 if status is-interactive
-    # Commands to run in interactive sessions can go here
-    # Set up ASDF
-    source ~/.asdf/asdf.fish
-
     # Set up FZF
     fzf --fish | source
 
